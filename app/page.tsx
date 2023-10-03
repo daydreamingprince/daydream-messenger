@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <p>Hello Daydream!</p>
+      <p className="text-sky-500 text-3xl">Hello Daydream!</p>
     </div>
   )
 }
