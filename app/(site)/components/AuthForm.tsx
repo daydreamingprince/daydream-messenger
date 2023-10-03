@@ -37,8 +37,11 @@ const AuthForm = () => {
     if (variant === 'REGISTER') {
       {/** Axios Register goes here */}
     }
-  }
 
+    if (variant === 'LOGIN') {
+      {/** NextAuth SignIn Goes here */}
+    }
+  }
   return (
     <div>Daydream Auth Form</div>
    );
