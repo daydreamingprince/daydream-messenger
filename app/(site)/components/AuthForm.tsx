@@ -73,7 +73,13 @@ const AuthForm = () => {
           sm:px-10
         "
       >
+         {/** Auth Form */}
+        <form
+          className="space-y-6"
+          onSubmit={handleSubmit(onSubmit)}
+        >
 
+        </form>
       </div>
     </div>
    );
