@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div
@@ -13,7 +15,16 @@ export default function Home() {
         bg-gray-100
       "
     >
-
+      {/** Project Logo on Log in */}
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <Image
+          alt="Project Logo"
+          height="70"
+          width="70"
+          className="mx-auto w-auto"
+          src="/images/3.png"
+        />
+      </div>
     </div>
   )
 }
