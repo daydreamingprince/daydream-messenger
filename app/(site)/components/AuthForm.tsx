@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -16,7 +17,13 @@ const AuthForm = () => {
     }
   }, [variant])
 
-  
+  const {} = useForm<FieldValues>({
+    defaultValues: {
+      name: '',
+      email: '',
+      password: ''
+    }
+  });
 
   return (
     <div>Daydream Auth Form</div>
