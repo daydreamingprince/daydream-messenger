@@ -1,3 +1,3 @@
-![Logo](./public/images/3-nontransparent.jpg)
+![Logo](./public/images/non-transparent.jpg)
 # Daydream Messenger
 A Messaging app for Daydreamers
