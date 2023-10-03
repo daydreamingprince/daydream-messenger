@@ -1,3 +1,5 @@
+'use client';
+
 const AuthForm = () => {
   return ( 
     <div>Daydream Auth Form</div>
