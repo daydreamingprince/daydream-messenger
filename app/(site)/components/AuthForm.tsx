@@ -1,7 +1,11 @@
 'use client';
 
 import { useCallback, useState } from "react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { 
+  FieldValues, 
+  SubmitHandler, 
+  useForm 
+} from "react-hook-form";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -50,7 +54,9 @@ const AuthForm = () => {
   }
 
   return (
-    <div>Daydream Auth Form</div>
+    <div>
+
+    </div>
    );
 }
  
