@@ -38,6 +38,7 @@ export default function Home() {
           Sign in to your account
         </h2>
       </div>
+      {/** AuthForm */}
     </div>
   )
 }
