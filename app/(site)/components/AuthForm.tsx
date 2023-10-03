@@ -42,6 +42,13 @@ const AuthForm = () => {
       {/** NextAuth SignIn Goes here */}
     }
   }
+
+  const socialAction = (action: string) => {
+    setIsLoading(true);
+
+    {/** NextAuth Social Sign In Goes Here */}
+  }
+
   return (
     <div>Daydream Auth Form</div>
    );
