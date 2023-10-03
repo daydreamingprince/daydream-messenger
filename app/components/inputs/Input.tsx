@@ -17,7 +17,15 @@ interface InputProps {
   disabled?: boolean,
 }
 
-const Input = () => {
+const Input: React.FC<InputProps> = ({
+  label,
+  id,
+  type,
+  required,
+  register,
+  errors,
+  disabled
+}) => {
   return ( 
     <div>
       Daydream Input Here!
