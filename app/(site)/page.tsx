@@ -7,7 +7,7 @@ export default function Home() {
           text-3xl
         "
       >
-        Hello Daydream!
+        Hello Daydream Index!
       </p>
     </div>
   )
