@@ -105,7 +105,9 @@ const AuthForm = () => {
             errors={errors}
           />
           <div>
-            <Button>Test</Button>
+            <Button>
+              {variant === 'LOGIN' ? 'Sign in' : 'Register'}
+            </Button>
           </div>
         </form>
       </div>
