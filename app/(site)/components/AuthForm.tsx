@@ -105,7 +105,11 @@ const AuthForm = () => {
             errors={errors}
           />
           <div>
-            <Button>
+            <Button
+              disabled={isLoading}
+              fullWidth
+              type="submit"
+            >
               {variant === 'LOGIN' ? 'Sign in' : 'Register'}
             </Button>
           </div>
