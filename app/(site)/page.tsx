@@ -21,8 +21,8 @@ export default function Home() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Image
           alt="Project Logo"
-          height="100"
-          width="100"
+          height="200"
+          width="200"
           className="mx-auto w-auto"
           src="/images/3.png"
         />
