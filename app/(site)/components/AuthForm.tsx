@@ -83,6 +83,7 @@ const AuthForm = () => {
             id="email" 
             label="Email" 
             register={register}
+            errors={errors}
           />
         </form>
       </div>
