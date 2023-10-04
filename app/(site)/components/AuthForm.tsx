@@ -193,6 +193,7 @@ const AuthForm = () => {
               icon={BsGithub}
               onClick={() => socialAction('github')}
             />
+            {/** There seems to be a problem with google log in in this code */}
             <AuthSocialButton
               icon={BsGoogle}
               onClick={() => socialAction('google')}
