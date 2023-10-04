@@ -74,7 +74,17 @@ const AuthForm = () => {
   const socialAction = (action: string) => {
     setIsLoading(true);
 
-    {/** NextAuth Social Sign In Goes Here */}
+    signIn(action, { redirect: false })
+    .then((callback) => {
+      if (callback?.error) {
+        toast.error('Invalid Credentials');
+      }
+
+      if (callback?.ok && !callback?.error) {
+        toast.success('Welcome Daydreamer!')
+      }
+    })
+    .finally(() => setIsLoading(false));
   }
 
   return (
