@@ -74,14 +74,31 @@ const AuthForm = () => {
           sm:px-10
         "
       >
-         {/** Email Auth Form */}
+         {/** Auth Form Inputs */}
         <form
           className="space-y-6"
           onSubmit={handleSubmit(onSubmit)}
         >
+          {variant === 'REGISTER'&& (
+            <Input 
+              id="name" 
+              label="Name" 
+              register={register}
+              errors={errors}
+            />
+          )}
+          {/** Input for email address */}
           <Input 
             id="email" 
-            label="Email" 
+            label="Email address"
+            type="email" 
+            register={register}
+            errors={errors}
+          />
+          <Input 
+            id="password" 
+            label="Password"
+            type="password" 
             register={register}
             errors={errors}
           />
