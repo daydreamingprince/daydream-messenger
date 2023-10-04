@@ -64,7 +64,7 @@ const AuthForm = () => {
       "
     >
       <div
-        /** AuthForm Box goes here */
+        /** AuthForm Box */
         className="
           bg-white
           px-4
@@ -74,7 +74,7 @@ const AuthForm = () => {
           sm:px-10
         "
       >
-         {/** Auth Form goes here */}
+         {/** Auth Form */}
         <form
           className="space-y-6"
           onSubmit={handleSubmit(onSubmit)}
