@@ -41,6 +41,7 @@ const Input: React.FC<InputProps> = ({
       >
         {label}
       </label>
+      {/** Auth Form Email Text Box */}
       <div className="mt-2">
         <input
           id={id}
