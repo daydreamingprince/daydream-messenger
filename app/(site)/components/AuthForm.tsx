@@ -14,6 +14,7 @@ import AuthSocialButton from "./AuthSocialButton";
 
 import { BsGithub, BsGoogle } from 'react-icons/bs';
 import { toast } from "react-hot-toast";
+import { signIn } from "next-auth/react";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -53,7 +54,20 @@ const AuthForm = () => {
     }
 
     if (variant === 'LOGIN') {
-      {/** NextAuth SignIn Goes here */}
+      signIn('credentials', {
+        ...data,
+        redirect: false
+      })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error('Invalid credentials');
+        }
+
+        if (callback?.ok && !callback?.error) {
+          toast.success('Welcome Daydreamer!')
+        }
+      })
+      .finally(() => setIsLoading(false));
     }
   }
 
