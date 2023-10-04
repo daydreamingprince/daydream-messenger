@@ -95,6 +95,7 @@ const AuthForm = () => {
             register={register}
             errors={errors}
           />
+          {/** Input for password */}
           <Input 
             id="password" 
             label="Password"
