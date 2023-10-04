@@ -8,6 +8,7 @@ import {
   SubmitHandler, 
   useForm 
 } from "react-hook-form";
+import AuthSocialButton from "./AuthSocialButton";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -152,6 +153,11 @@ const AuthForm = () => {
               </span>
             </div>
           </div>
+
+          <div className="mt-6 flex gap-2">
+            <AuthSocialButton />
+          </div>
+
         </div>
       </div>
     </div>
