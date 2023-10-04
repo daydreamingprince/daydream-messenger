@@ -133,7 +133,24 @@ const AuthForm = () => {
                 border-gray-300" 
                 />
             </div>
-
+            <div 
+              className="
+                relative 
+                flex 
+                justify-center 
+                text-sm
+              "
+            >
+              <span 
+                className="
+                bg-white 
+                  px-2 
+                text-gray-500
+                "
+              >
+                Or continue with
+              </span>
+            </div>
           </div>
         </div>
       </div>
