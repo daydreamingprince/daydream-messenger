@@ -27,7 +27,7 @@ const AuthForm = () => {
     if (session?.status === 'authenticated') {
       console.log('Authenticated')
     }
-  }, [session?.status])
+  }, [session?.status]);
 
   const toggleVariant = useCallback(() => {
     if (variant === 'LOGIN') {
