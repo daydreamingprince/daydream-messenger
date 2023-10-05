@@ -23,11 +23,13 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
       return onClick();
     }
   };
-  
+
   return ( 
-    <div>
-      Desktop Item
-    </div>
+    <li onClick={handleClick}>
+      <Link href={href}>
+        <span>{label}</span>
+      </Link>
+    </li>
    );
 }
  
