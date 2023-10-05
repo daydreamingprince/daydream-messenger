@@ -1,6 +1,7 @@
 "use client";
 
 import { User } from "@prisma/client";
+import UserBox from "./UserBox";
 
 interface UserListProps {
   items: User[]
@@ -38,6 +39,12 @@ const UserList: React.FC<UserListProps> = ({
             Daydreamers
           </div>
         </div>
+        {items.map((item) => (
+          <UserBox
+            key={items.id}
+            data={item}
+          />
+        ))}
       </div>
     </aside>
    );
