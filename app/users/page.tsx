@@ -1,6 +1,7 @@
 'use client'
 
 import { signOut } from "next-auth/react";
+import EmptyState from "../components/EmptyState";
 
 const Users = () => {
   return ( 
@@ -13,7 +14,7 @@ const Users = () => {
         h-full
       "
     >
-      
+      <EmptyState />
     </div>
    );
 }
