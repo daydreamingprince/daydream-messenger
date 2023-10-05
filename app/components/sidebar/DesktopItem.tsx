@@ -13,7 +13,7 @@ interface DesktopItemProps {
 
 const DesktopItem: React.FC<DesktopItemProps> = ({
   label,
-  icon,
+  icon: Icon,
   href,
   onClick,
   active
@@ -27,6 +27,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
   return ( 
     <li onClick={handleClick}>
       <Link href={href}>
+        <Icon className="h-6 w-6 shrink-0" />
         <span>{label}</span>
       </Link>
     </li>
