@@ -1,4 +1,7 @@
+'use client';
+
 const DesktopSidebar = () => {
+
   return ( 
     <div>
       Desktop Sidebar
