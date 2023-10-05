@@ -2,7 +2,7 @@ import EmptyState from "../components/EmptyState";
 
 const Users = () => {
   return ( 
-    /** Sidebar */
+    /** EmptyState Dimensions */
     <div
       className="
         hidden
