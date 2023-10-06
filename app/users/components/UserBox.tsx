@@ -45,7 +45,7 @@ const [isLoading, setIsLoading] = useState(false);
         cursor-pointer
       "
     >
-      <Avatar />
+      <Avatar user={data}/>
     </div>
    );
 }
