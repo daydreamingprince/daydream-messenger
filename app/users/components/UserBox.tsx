@@ -2,7 +2,7 @@
 
 import { User } from "@prisma/client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 interface UserBoxProps {
   data: User
@@ -13,6 +13,10 @@ const UserBox:React.FC<UserBoxProps> = ({
 }) => {
 const router = useRouter();
 const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = useCallback(() => {
+
+  }, [])
 
   return ( 
     <div>User</div>
