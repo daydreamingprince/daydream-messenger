@@ -1,6 +1,7 @@
 "use client";
 
 import { User } from "@prisma/client";
+import { useRouter } from "next/navigation";
 
 interface UserBoxProps {
   data: User
@@ -9,6 +10,8 @@ interface UserBoxProps {
 const UserBox:React.FC<UserBoxProps> = ({
   data
 }) => {
+const router = useRouter();
+
   return ( 
     <div>User</div>
    );
