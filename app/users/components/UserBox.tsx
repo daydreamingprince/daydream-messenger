@@ -1,6 +1,7 @@
 "use client";
 
 import { User } from "@prisma/client";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
@@ -15,7 +16,11 @@ const router = useRouter();
 const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = useCallback(() => {
+    setIsLoading(true);
 
+    axios.post('/api/conversations', {
+      userId: data.id
+    })
   }, [])
 
   return ( 
