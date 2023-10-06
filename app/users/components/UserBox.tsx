@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/app/components/avatar";
 import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -28,7 +29,24 @@ const [isLoading, setIsLoading] = useState(false);
   }, [data, router])
 
   return ( 
-    <div>User</div>
+    <div
+      onClick={handleClick}
+      className="
+        w-full
+        relative
+        flex
+        items-center
+        space-x-3
+        bg-white
+        p-3
+        hover:bg-neutral-100
+        rounded-lg
+        transition
+        cursor-pointer
+      "
+    >
+      <Avatar />
+    </div>
    );
 }
  
