@@ -21,7 +21,11 @@ const [isLoading, setIsLoading] = useState(false);
     axios.post('/api/conversations', {
       userId: data.id
     })
-  }, [])
+    .then((data) => {
+      router.push(`/conversations/${data.data.id}`);
+    })
+    .finally(() => setIsLoading(false));
+  }, [data, router])
 
   return ( 
     <div>User</div>
