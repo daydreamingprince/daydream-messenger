@@ -6,7 +6,8 @@ export async function POST(
   request: Request
 ) {
   try {
-
+    const currentUser = await getCurrentUser();
+    const body = await request.json();
   } catch (error:any) {
     return new NextResponse('Internal Error', { status: 500 });
   }
