@@ -30,6 +30,7 @@ const [isLoading, setIsLoading] = useState(false);
 
   return ( 
     <div
+    /** Styling for Avatar on Sidebar */
       onClick={handleClick}
       className="
         w-full
