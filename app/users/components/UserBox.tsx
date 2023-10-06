@@ -47,6 +47,29 @@ const [isLoading, setIsLoading] = useState(false);
       "
     >
       <Avatar user={data}/>
+      <div className="min-w-0 flex-1">
+        <div className="focus:outline-none">
+          <div
+            className="
+              flex
+              justify-between
+              items-center
+              mb-1
+            "
+          >
+            <p
+            /** Users name beside their avatar */
+              className="
+                text-sm
+                font-medium
+                text-gray-900
+              "
+            >
+              {data.name}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
    );
 }
