@@ -47,6 +47,29 @@ export async function POST(
       return NextResponse.json(newConversation);
     }
 
+    const existingConversations = await prisma.conversation.findMany({
+      where: {
+        OR: [
+          {
+            userIds: {
+              equals: [currentUser.id, userId]
+            }
+          },
+          {
+            userIds: {
+              equals: [userId, currentUser.id]
+            }
+          }
+        ]
+      }
+    });
+
+    const singleConversation = existingConversations[0];
+
+    if (singleConversation) {
+      return NextResponse.json(singleConversation);
+    }
+
   } catch (error:any) {
     return new NextResponse('Internal Error', { status: 500 });
   }
