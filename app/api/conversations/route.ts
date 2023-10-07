@@ -38,8 +38,13 @@ export async function POST(
               }
             ]
           }
+        },
+        include: {
+          users: true
         }
-      })
+      });
+
+      return NextResponse.json(newConversation);
     }
 
   } catch (error:any) {
