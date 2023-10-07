@@ -70,6 +70,26 @@ export async function POST(
       return NextResponse.json(singleConversation);
     }
 
+    const newConversation = await prisma.conversation.create({
+      data: {
+        users: {
+          connect: [
+            {
+              id: currentUser.id
+            },
+            {
+              id: userId
+            }
+          ]
+        }
+      },
+      include: {
+        users: true
+      }
+    });
+
+    return NextResponse.json(newConversation);
+
   } catch (error:any) {
     return new NextResponse('Internal Error', { status: 500 });
   }
