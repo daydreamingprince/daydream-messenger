@@ -8,4 +8,10 @@ const getConversations = async () => {
   if (!currentUser?.id) {
     return [];
   }
+
+  try {
+
+  } catch (error: any) {
+    return [];
+  }
 }
