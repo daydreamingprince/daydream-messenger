@@ -49,8 +49,18 @@ const ConversationList: React.FC<ConversationListProps> = ({
           >
             Messages
           </div>
-          <div>
-            <MdOutlineGroupAdd />
+          <div
+            className="
+              rounded-full
+              p-2
+              bg-gray-100
+              text-orange-600
+              cursor-pointer
+              hover:opacity-75
+              transition
+            "
+          >
+            <MdOutlineGroupAdd size={20} />
           </div>
         </div>        
       </div>
