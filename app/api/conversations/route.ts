@@ -23,6 +23,25 @@ export async function POST(
       return new NextResponse('Invalid data', { status: 400 })
     }
 
+    if (isGroup) {
+      const newConversation = await prisma.conversation.create({
+        data: {
+          name,
+          isGroup,
+          users: {
+            connect: [
+              ...members.map((member: { value: string }) => ({
+                id: member.value
+              })),
+              {
+                id: currentUser.id
+              }
+            ]
+          }
+        }
+      })
+    }
+
   } catch (error:any) {
     return new NextResponse('Internal Error', { status: 500 });
   }
