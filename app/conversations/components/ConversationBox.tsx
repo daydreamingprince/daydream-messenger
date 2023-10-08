@@ -106,7 +106,13 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
               {data.name || otherUser.name}
             </p>
             {lastMessage?.createdAt && (
-              <p>
+              <p
+                className="
+                  text-xs
+                  text-gray-400
+                  font-light
+                "
+              >
                 {format(new Date(lastMessage.createdAt), 'p')}
               </p>
             )}
