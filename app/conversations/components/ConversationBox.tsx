@@ -86,6 +86,21 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
       )}
     >
       <Avatar user={otherUser} />
+      <div className="min-w-0 flex-1">
+        <div className="focus:outline-none">
+          <div
+            className="
+              flex
+              justify-between
+              mb-1
+            "
+          >
+            <p>
+              {data.name || otherUser.name}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
    );
 }
