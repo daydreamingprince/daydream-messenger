@@ -8,6 +8,7 @@ import { useSession } from "next-auth/react";
 import clsx from "clsx";
 
 import { FullConversationType } from "@/app/types";
+import useOtherUser from "@/app/hooks/useOtherUser";
 
 interface ConversationBoxProps {
   data: FullConversationType,
@@ -19,6 +20,20 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
   data,
   selected
 }) => {
+  const otherUser = useOtherUser(data);
+  const session = useSession();
+  const router = useRouter();
+
+  const handleClick = useCallback(() => {
+    router.push(`/conversations/${data.id}`);
+  }, [data.id, router]);
+
+  const lastMessage = useMemo(() => {
+    const messages = data.messages || [];
+
+    return messages[messages.length - 1];
+  }, [data.messages]);
+
   return ( 
     <div>
       ConversationBox
