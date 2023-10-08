@@ -66,8 +66,24 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
   }, [lastMessage]);
 
   return ( 
-    <div>
-      ConversationBox
+    <div
+      /** Styling for the conversations */
+      onClick={handleClick}
+      className={clsx(`
+        w-full
+        relative
+        flex
+        items-center
+        space-x-3
+        hover:bg-neutral-100
+        rounded-lg
+        transition
+        cursor-pointer
+      `,
+        selected ? 'bg-neutral-100' : 'bg-white'
+      )}
+    >
+      
     </div>
    );
 }
