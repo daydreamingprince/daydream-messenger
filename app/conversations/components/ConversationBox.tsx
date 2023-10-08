@@ -71,7 +71,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
       /** Styling for the conversations */
       onClick={handleClick}
       className={clsx(`
-        w-full
+        w-full,
         relative
         flex
         items-center
@@ -80,6 +80,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         rounded-lg
         transition
         cursor-pointer
+        p-3
       `,
         selected ? 'bg-neutral-100' : 'bg-white'
       )}
