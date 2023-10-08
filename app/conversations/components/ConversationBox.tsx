@@ -92,10 +92,17 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
             className="
               flex
               justify-between
+              items-center
               mb-1
             "
           >
-            <p>
+            <p
+              className="
+                text-md
+                font-medium
+                text-gray-900
+              "
+            >
               {data.name || otherUser.name}
             </p>
           </div>
