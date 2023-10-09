@@ -57,7 +57,11 @@ const Header: React.FC<HeaderProps> = ({
           <HiChevronLeft size={32} />
         </Link>
         <Avatar user={otherUser} />
-        
+        <div className="flex flex-col">
+          <div>
+            {conversation.name || otherUser.name}
+          </div>
+        </div>
       </div>
     </div>
    );
