@@ -26,6 +26,7 @@ const Form = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setValue('message', '', { shouldValidate: true });
+
     axios.post('/api/messages', {
       ...data,
       conversationId
@@ -33,7 +34,19 @@ const Form = () => {
   };
 
   return ( 
-    <div>
+    <div
+      className="
+        py-4
+        px-4
+        bg-white
+        border-t
+        flex
+        items-center
+        gap-2
+        lg:gap-4
+        w-full
+      "
+    >
       Form
     </div>
    );
