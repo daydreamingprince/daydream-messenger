@@ -7,6 +7,7 @@ import {
   SubmitHandler, 
   useForm 
 } from "react-hook-form";
+import { HiPhoto } from "react-icons/hi2";
 
 const Form = () => {
   const { conversationId } = useConversation();
@@ -47,7 +48,7 @@ const Form = () => {
         w-full
       "
     >
-      Form
+      <HiPhoto size={30} className="text-orange-500" />
     </div>
    );
 }
