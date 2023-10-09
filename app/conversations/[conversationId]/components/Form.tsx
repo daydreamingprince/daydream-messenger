@@ -51,7 +51,7 @@ const Form = () => {
       <HiPhoto size={30} className="text-orange-500" />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        
+        className="flex items-center gap-2 lg:gap-4 w-full"
       >
 
       </form>
