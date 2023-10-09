@@ -2,7 +2,9 @@
 
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
+import Link from "next/link";
 import { useMemo } from "react";
+import { HiChevronLeft } from "react-icons/hi2";
 
 interface HeaderProps {
   conversation: Conversation & {
@@ -40,7 +42,19 @@ const Header: React.FC<HeaderProps> = ({
       "
     >
       <div className="flex gap-3 items-center">
-        
+        <Link 
+          className="
+            lg:hidden
+            block
+            text-orange-500
+            hover:text-orange-600
+            transition
+            cursor-pointer
+          "
+          href="/conversations"
+        >
+          <HiChevronLeft size={32} />
+        </Link>
       </div>
     </div>
    );
