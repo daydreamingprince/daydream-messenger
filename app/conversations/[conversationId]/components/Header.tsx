@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/app/components/Avatar";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
 import Link from "next/link";
@@ -55,6 +56,8 @@ const Header: React.FC<HeaderProps> = ({
         >
           <HiChevronLeft size={32} />
         </Link>
+        <Avatar user={otherUser} />
+        
       </div>
     </div>
    );
