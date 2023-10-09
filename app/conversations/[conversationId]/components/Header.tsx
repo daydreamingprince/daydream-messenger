@@ -16,8 +16,12 @@ const Header: React.FC<HeaderProps> = ({
   const otherUser = useOtherUser(conversation);
 
   const statusText = useMemo(() => {
+    if (conversation.isGroup) {
+      return `${conversation.users.length} members`;
+    }
 
-  }, []);
+    return 'Active';
+  }, [conversation]);
 
   return ( 
     <div>
