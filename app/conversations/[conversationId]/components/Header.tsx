@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({
       "
     >
       <div className="flex gap-3 items-center">
-
+        
       </div>
     </div>
    );
