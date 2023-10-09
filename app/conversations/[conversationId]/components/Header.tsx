@@ -44,6 +44,7 @@ const Header: React.FC<HeaderProps> = ({
     >
       <div className="flex gap-3 items-center">
         <Link 
+          /** Styling for the back button on header on mobile view */
           className="
             lg:hidden
             block
@@ -75,6 +76,7 @@ const Header: React.FC<HeaderProps> = ({
       <HiEllipsisHorizontal 
         size={32}
         onClick={() => {}}
+        /** Styling for the Horizontal Ellipsis on header */
         className="
           text-orange-500
           cursor-pointer
