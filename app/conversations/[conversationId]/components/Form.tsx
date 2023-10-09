@@ -49,6 +49,12 @@ const Form = () => {
       "
     >
       <HiPhoto size={30} className="text-orange-500" />
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        
+      >
+
+      </form>
     </div>
    );
 }
