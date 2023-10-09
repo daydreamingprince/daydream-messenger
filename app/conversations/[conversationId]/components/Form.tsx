@@ -53,7 +53,8 @@ const Form = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex items-center gap-2 lg:gap-4 w-full"
       >
-
+        {/** 0043750 */}
+        <MessageInput />
       </form>
     </div>
    );
