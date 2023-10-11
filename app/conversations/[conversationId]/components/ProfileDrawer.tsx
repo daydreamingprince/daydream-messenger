@@ -1,7 +1,7 @@
 "use client";
 
 import useOtherUser from "@/app/hooks/useOtherUser";
-import { Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import { Conversation, User } from "@prisma/client";
 import { format } from "date-fns";
 import { Fragment, useMemo } from "react";
@@ -39,7 +39,19 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   return ( 
     <Transition.Root show={isOpen} as={Fragment}>
-      
+      <Dialog as="div" className="relative z-50" onClose={onClose}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          
+        </Transition.Child>
+      </Dialog>
     </Transition.Root>
    );
 }
