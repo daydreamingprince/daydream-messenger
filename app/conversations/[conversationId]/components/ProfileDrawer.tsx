@@ -1,5 +1,6 @@
 "use client";
 
+import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
 
 interface ProfileDrawerProps {
@@ -15,6 +16,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   onClose,
   data
 }) => {
+  const otherUser = useOtherUser(data);
   return ( 
     <div>
       Profile Drawer
