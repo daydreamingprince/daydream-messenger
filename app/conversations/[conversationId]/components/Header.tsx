@@ -4,7 +4,7 @@ import Avatar from "@/app/components/Avatar";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
 
 interface HeaderProps {
@@ -17,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({
   conversation
 }) => {
   const otherUser = useOtherUser(conversation);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const statusText = useMemo(() => {
     if (conversation.isGroup) {
@@ -26,8 +27,9 @@ const Header: React.FC<HeaderProps> = ({
     return 'Active';
   }, [conversation]);
 
-  return ( 
-    <div
+  return (
+    <> 
+      <div
       className="
         bg-white
         w-full
@@ -84,7 +86,8 @@ const Header: React.FC<HeaderProps> = ({
           transition
         "
       />
-    </div>
+      </div>
+    </>
    );
 }
  
