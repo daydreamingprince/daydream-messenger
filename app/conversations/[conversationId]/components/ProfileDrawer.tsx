@@ -24,6 +24,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     return format(new Date(otherUser.createdAt), 'PP')
   }, [otherUser.createdAt]);
 
+  const title = useMemo(() => {
+    return data.name || otherUser.name;
+  }, [data.name, otherUser.name]);
+
   return ( 
     <div>
       Profile Drawer
