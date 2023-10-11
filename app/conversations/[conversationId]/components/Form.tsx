@@ -36,6 +36,13 @@ const Form = () => {
     })
   };
 
+  const handleUpload = (result: any) => {
+    axios.post('/api/messages', {
+      image: result?.info?.secure_url,
+      conversationId
+    })
+  };
+
   return ( 
     <div
       className="
@@ -52,7 +59,7 @@ const Form = () => {
     >
       <CldUploadButton
         options={{ maxFiles: 1 }}
-        onUpload={() => {}}
+        onUpload={() => {handleUpload}}
         uploadPreset="imageupload"
       >
         <HiPhoto size={30} className="text-orange-500" />
