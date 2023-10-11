@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/app/components/Avatar";
 import { FullMessageType } from "@/app/types";
 import clsx from "clsx";
 import { useSession } from "next-auth/react";
@@ -40,8 +41,10 @@ const MessageBox: React.FC<MessageBoxProps> = ({
   );
 
   return ( 
-    <div>
-      Message Box
+    <div className={container}>
+      <div className={avatar}>
+        <Avatar user={data.sender} />
+      </div>
     </div>
    );
 }
