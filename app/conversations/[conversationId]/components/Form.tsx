@@ -9,6 +9,7 @@ import {
 } from "react-hook-form";
 import { HiPaperAirplane, HiPhoto } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
+import { CldUploadButton } from "next-cloudinary";
 
 const Form = () => {
   const { conversationId } = useConversation();
@@ -49,7 +50,9 @@ const Form = () => {
         w-full
       "
     >
-      <HiPhoto size={30} className="text-orange-500" />
+      <CldUploadButton>
+        <HiPhoto size={30} className="text-orange-500" />
+      </CldUploadButton>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex items-center gap-2 lg:gap-4 w-full"
