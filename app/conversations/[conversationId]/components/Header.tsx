@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({
       </div>
       <HiEllipsisHorizontal 
         size={32}
-        onClick={() => {}}
+        onClick={() => setDrawerOpen(true)}
         /** Styling for the Horizontal Ellipsis on header */
         className="
           text-orange-500
