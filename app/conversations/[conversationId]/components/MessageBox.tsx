@@ -14,7 +14,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 }) => {
   const session = useSession();
 
-  
+  const isOwn = session?.data?.user?.email === data?.sender?.email;
 
   return ( 
     <div>
