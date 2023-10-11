@@ -45,6 +45,13 @@ const MessageBox: React.FC<MessageBoxProps> = ({
       <div className={avatar}>
         <Avatar user={data.sender} />
       </div>
+      <div className={body}>
+        <div className="flex items-center gap-1">
+          <div className="text-sm text-gray-500">
+            {data.sender.name}
+          </div>
+        </div>
+      </div>
     </div>
    );
 }
