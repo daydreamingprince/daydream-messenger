@@ -1,6 +1,7 @@
 "use client";
 
 import { FullMessageType } from "@/app/types";
+import clsx from "clsx";
 import { useSession } from "next-auth/react";
 
 interface MessageBoxProps {
@@ -18,7 +19,25 @@ const MessageBox: React.FC<MessageBoxProps> = ({
   const seenList = (data.seen || [])
   .filter((user) => user.email !== data?.sender?.email)
   .map((user) => user.name)
-  .join(', ');
+  .join(', '); // This will output something like Prince, Simoun, Jazpher
+
+  const container = clsx(
+    "flex gap-3 p-4",
+    isOwn && "justify-end"
+  );
+
+  const avatar = clsx(isOwn && "order-2");
+
+  const body = clsx(
+    "flex flex-col gap-2",
+    isOwn && "items-end"
+  );
+
+  const message = clsx(
+    "text-sm w-fit overflow-hidden",
+    isOwn ? 'bg-orange-500 text-white' : 'bg-gray-100',
+    data.image ? 'rounded-md p-0' : 'rounded-full py-2 px-3'
+  );
 
   return ( 
     <div>
