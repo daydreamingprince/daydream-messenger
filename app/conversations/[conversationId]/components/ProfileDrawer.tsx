@@ -2,6 +2,8 @@
 
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
+import { format } from "date-fns";
+import { useMemo } from "react";
 
 interface ProfileDrawerProps {
   isOpen: boolean;
@@ -17,6 +19,11 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   data
 }) => {
   const otherUser = useOtherUser(data);
+
+  const joinedDate = useMemo(() => {
+    return format(new Date(otherUser.createdAt), 'PP')
+  }, [otherUser.createdAt]);
+
   return ( 
     <div>
       Profile Drawer
