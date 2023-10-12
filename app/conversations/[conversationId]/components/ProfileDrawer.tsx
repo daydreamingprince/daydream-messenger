@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/app/components/Avatar";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Dialog, Transition } from "@headlessui/react";
 import { Conversation, User } from "@prisma/client";
@@ -131,6 +132,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                           <button
                             onClick={onClose}
                             type="button"
+                            /** Styling for close button on profile drawer */
                             className="
                               rounded-md
                               bg-white
@@ -145,6 +147,28 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                             <span className="sr-only">Close Panel</span>
                             <IoClose size={24} />
                           </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="
+                        relative
+                        mt-6
+                        flex-1
+                        px-4
+                        sm:px-6
+                      "
+                    >
+                      <div
+                        className="
+                          flex
+                          flex-col
+                          items-center
+                        "
+                      >
+                        <div className="mb-2">
+                          {/** Avatar for other user on the drawer */}
+                          <Avatar user={otherUser} />
                         </div>
                       </div>
                     </div>
