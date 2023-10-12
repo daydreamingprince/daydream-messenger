@@ -173,6 +173,14 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                         <div>
                           {title}
                         </div>
+                        <div
+                          className="
+                            text-sm
+                            text-gray-500
+                          "
+                        >
+                          {statusText}
+                        </div>
                       </div>
                     </div>
                   </div>
