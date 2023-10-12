@@ -170,6 +170,9 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                           {/** Avatar for other user on the drawer */}
                           <Avatar user={otherUser} />
                         </div>
+                        <div>
+                          {title}
+                        </div>
                       </div>
                     </div>
                   </div>
