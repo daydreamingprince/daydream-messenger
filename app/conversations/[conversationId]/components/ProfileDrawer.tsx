@@ -7,7 +7,7 @@ import { Conversation, User } from "@prisma/client";
 import { format } from "date-fns";
 import { Fragment, useMemo } from "react";
 
-import { IoClose } from "react-icons/io5"
+import { IoClose, IoTrash } from "react-icons/io5"
 
 interface ProfileDrawerProps {
   isOpen: boolean;
@@ -180,6 +180,41 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                           "
                         >
                           {statusText}
+                        </div>
+                        <div
+                          className="
+                            flex
+                            gap-10
+                            my-8
+                          "
+                        >
+                          <div
+                            onClick={() => {}}
+                            className="
+                              flex
+                              flex-col
+                              gap-3
+                              items-center
+                              cursor-pointer
+                              hover:opacity-75
+                            "
+                          >
+                            <div
+                              /** Styling for the trash button icon */
+                              className="
+                                w-10
+                                h-10
+                                bg-neutral-100
+                                rounded-full
+                                flex
+                                items-center
+                                justify-center
+                                text-orange-600
+                              "
+                            >
+                              <IoTrash size={20} />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
