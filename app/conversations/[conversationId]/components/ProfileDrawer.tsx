@@ -45,6 +45,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     <>
       <Modal
         isOpen
+        onClose={() => {}}
       />
       <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
