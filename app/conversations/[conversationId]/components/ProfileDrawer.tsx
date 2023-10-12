@@ -209,10 +209,19 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                 flex
                                 items-center
                                 justify-center
-                                text-orange-600
+                                text-orange-500
                               "
                             >
                               <IoTrash size={20} />
+                            </div>
+                            <div 
+                              className="
+                                text-sm
+                                font-light
+                                text-neutral-600
+                              "
+                            >
+                              Delete
                             </div>
                           </div>
                         </div>
