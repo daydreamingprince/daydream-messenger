@@ -1,6 +1,7 @@
 "use client";
 
 import Avatar from "@/app/components/Avatar";
+import Modal from "@/app/components/Modal";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Dialog, Transition } from "@headlessui/react";
 import { Conversation, User } from "@prisma/client";
@@ -42,6 +43,9 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   return ( 
     <>
+      <Modal
+        isOpen
+      />
       <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
         <Transition.Child
