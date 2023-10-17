@@ -19,7 +19,8 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
   console.log({ currentUser })
 
   return ( 
-    <div
+    <>
+      <div
       className="
         hidden
         lg:fixed
@@ -86,7 +87,8 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
           <Avatar user={currentUser} />
         </div>
       </nav>
-    </div>
+      </div>
+    </>
    );
 }
  
