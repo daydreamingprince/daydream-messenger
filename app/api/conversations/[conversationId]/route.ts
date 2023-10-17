@@ -32,6 +32,16 @@ export async function DELETE(
       return new NextResponse('Invalid ID', { status: 400 });
     }
 
+    const deletedConversation = await prisma.conversation.deleteMany({
+      where: {
+        id: conversationId,
+        userIds: {
+          hasSome: [currentUser.id]
+        }
+      }
+    });
+
+    return NextResponse.json(deletedConversation);
   } catch (error: any) {
     console.log(error, 'ERROR_CONVERSATION_DELETE')
     return new NextResponse('Internal Error', { status: 500 });
