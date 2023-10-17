@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import Modal from "@/app/components/Modal";
 import useConversation from "@/app/hooks/useConversation";
 import { Dialog } from "@headlessui/react";
@@ -69,13 +70,38 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             text-center
             sm:ml-4
             sm:mt-0
-            sm:text-black
+            sm:text-left
           "
         >
-          <Dialog.Title>
-            
+          <Dialog.Title
+            as="h3"
+            className="
+              text-base
+              font-semibold
+              leading-6
+              text-gray-900
+            "
+          >
+            Delete conversation
           </Dialog.Title>
+          <div className="mt-2">
+            <p className="text-sm text-gray-500">
+              Are you sure you want to delete this conversation? This action cannot be undone!
+            </p>
+          </div>
         </div>
+      </div>
+      <div 
+        className="
+          mt-5
+          sm:mt-4
+          sm:flex
+          sm:flex-row-reverse
+        "
+      >
+        <Button>
+          Delete
+        </Button>
       </div>
     </Modal>
    );
