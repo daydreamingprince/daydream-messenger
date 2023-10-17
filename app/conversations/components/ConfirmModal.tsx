@@ -99,8 +99,19 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
           sm:flex-row-reverse
         "
       >
-        <Button>
+        <Button
+          disabled={isLoading}
+          danger
+          onClick={onDelete}
+        >
           Delete
+        </Button>
+        <Button
+          disabled={isLoading}
+          secondary
+          onClick={onClose}
+        >
+          Cancel
         </Button>
       </div>
     </Modal>
