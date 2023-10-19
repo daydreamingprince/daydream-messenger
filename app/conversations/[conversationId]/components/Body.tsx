@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import MessageBox from "./MessageBox";
 import axios from "axios";
 import { pusherClient } from "@/app/libs/pusher";
+import { find } from "lodash";
 
 interface BodyProps {
   initialMessages: FullMessageType[]
@@ -28,7 +29,17 @@ const Body: React.FC<BodyProps> = ({
     bottomRef?.current?.scrollIntoView();
 
     const messageHandler = (message: FullMessageType) => {
+      axios.post(`/api/conversations/${conversationId}/seen`)
       
+      setMessages((current) => {
+        if (find(current, { id: message.id })) {
+          return current;
+        }
+
+        return [...current, message];
+      });
+
+      bottomRef?.current?.scrollIntoView();
     }
 
     pusherClient.bind('messages:new', messageHandler);
