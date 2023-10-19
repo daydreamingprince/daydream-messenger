@@ -9,6 +9,7 @@ import { Fragment, useMemo, useState } from "react";
 
 import { IoClose, IoTrash } from "react-icons/io5"
 import ConfirmModal from "../../components/ConfirmModal";
+import AvatarGroup from "@/app/components/sidebar/AvatarGroup";
 
 interface ProfileDrawerProps {
   isOpen: boolean;
@@ -175,7 +176,11 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                       >
                         <div className="mb-2">
                           {/** Avatar for other user on the drawer */}
-                          <Avatar user={otherUser} />
+                          {data.isGroup ? (
+                            <AvatarGroup users={data.users} />
+                          ) : (
+                            <Avatar user={otherUser} />
+                          )}
                         </div>
                         <div>
                           {title}
