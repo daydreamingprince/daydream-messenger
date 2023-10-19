@@ -1,6 +1,7 @@
 "use client";
 
 import Avatar from "@/app/components/Avatar";
+import LoadingModal from "@/app/components/LoadingModal";
 import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -30,6 +31,7 @@ const [isLoading, setIsLoading] = useState(false);
 
   return ( 
     <>
+      <LoadingModal />
       <div
       /** Styling for Avatar on Sidebar */
         onClick={handleClick}
