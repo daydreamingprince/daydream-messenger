@@ -31,7 +31,9 @@ const [isLoading, setIsLoading] = useState(false);
 
   return ( 
     <>
-      <LoadingModal />
+      {isLoading && (
+        <LoadingModal />
+      )}
       <div
       /** Styling for Avatar on Sidebar */
         onClick={handleClick}
