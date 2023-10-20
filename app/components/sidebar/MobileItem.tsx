@@ -20,7 +20,7 @@ const MobileItem: React.FC<MobileItemProps> = ({
     if (onClick) {
       return onClick();
     }
-  }
+  };
 
   return ( 
     <Link 
